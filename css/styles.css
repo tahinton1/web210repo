@@ -1,0 +1,44 @@
+
+/*General */
+img{
+    width: 300px;
+}
+body{
+    color: #343434; 
+}
+a {
+    color: yellow;
+}
+a:hover{
+    text-decoration: none;
+}
+/*Profile*/
+header{
+    background: darkblue;
+    color: whitesmoke;
+}
+.projects .btn{
+     color: whitesmoke;
+     background: darkblue;
+     padding: 8px;
+     border-radius: 4px;
+}
+.projects .btn:hover{
+    background: rgba(47,48,97, 80%);
+}
+/*Projects*/
+.projects {
+    background: beige;
+}
+
+/*Work*/
+.wEXP{
+    background: lightblue;
+}
+/*Education*/
+
+/*Contact */
+footer{
+    background: darkgray;
+    color: whitesmoke;
+}
