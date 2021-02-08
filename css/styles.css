@@ -3,14 +3,41 @@
 img{
     width: 300px;
 }
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
 body{
     color: #343434; 
+    margin: 0;
+    padding: 0;
+    font-family:'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
 }
 a {
     color: yellow;
 }
 a:hover{
     text-decoration: none;
+}
+h1, h2{
+    font-family: 'Lemonada', cursive;
+    font-weight: normal;
+    margin: 0;
+}
+h1{
+    font-size: 80px;
+}
+h2{
+    font-size: 30px;
+}
+.container{
+    width: 800px;
+    margin: 0 auto;
+    padding: 60px 0;
 }
 /*Profile*/
 header{
@@ -22,6 +49,7 @@ header{
      background: darkblue;
      padding: 8px;
      border-radius: 4px;
+     display: inline-block;
 }
 .projects .btn:hover{
     background: rgba(47,48,97, 80%);
@@ -29,6 +57,22 @@ header{
 /*Projects*/
 .projects {
     background: beige;
+}
+.dev-box {
+    overflow: hidden;
+    border-bottom: 1px solid darkgray;
+    /*padding-bottom: 20px;*/
+    padding: 20px 0px;
+}
+.dev-box h3{
+    margin-top: 0;
+}
+.dev-box img{
+    float:left;
+    margin-right: 10px;
+}
+.dev-box p {
+    margin-bottom: 0;
 }
 
 /*Work*/
