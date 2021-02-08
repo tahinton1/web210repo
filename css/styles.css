@@ -30,9 +30,13 @@ h1, h2{
 }
 h1{
     font-size: 80px;
+    text-shadow: 2px 2px black;
+    
 }
 h2{
     font-size: 30px;
+    font-style: italic;
+    text-shadow: 2px 2px darkgray;
 }
 .container{
     width: 800px;
@@ -66,6 +70,7 @@ header{
 }
 .dev-box h3{
     margin-top: 0;
+    color: blue;
 }
 .dev-box img{
     float:left;
