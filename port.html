@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjectPortfolio</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&family=Roboto+Mono:wght@500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <main>
+        <div class="grid-container">
+            <div class="HEAD1">
+                <h1>Tavern Crawl</h1>
+                <h3>Home of the OCBR</h3>
+            </div>
+            <div class="Navigation">
+                <div class="navbar">
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">OCBR</a>
+                    <a href="#"> Contact Us</a>
+                </div>
+            </div>
+            <div class="Carou">
+                <div class="slides fade">
+                    <img src="imageSilo/image.png" alt="Church_isometric" style="width: 100%; height: auto;">
+                </div>
+                <div class="slides fade">
+                    <img src="imageSilo/Church_isometric.png" alt="Church_isometric" style="width: 100%; height: auto;">
+                </div>
+                <div class="slides fade">
+                    <img src="imageSilo/Church_Isometric02.png" alt="Church_isometric" style="width: 100%; height: auto;">
+                </div>
+                <div class="slides fade">
+                    <img src="imageSilo/Isometric_Church_03_flatcolor.png" alt="Church_isometric" style="width: 100%; height: auto;">
+                </div>
+                <div class="slides fade">
+                    <img src="imageSilo/Isometric_Church_04.png" alt="Church_isometric" style="width: 100%; height: auto;">
+                </div>
+                <div class="slides fade">
+                    <img src="imageSilo/Isometric_Church_05.png" alt="Church_isometric" style="width: 100%; height: auto;">
+                </div>
+            </div>
+            <div class="About">
+                <H2>Who We Are</H2>
+                <p> Hello we are a group of friends interested in creating a large scale battle royal style game that features various characters submitted to us by creatives through the internet.<br>
+                By doing this we hope to inspire not only the character artist but the writer and musician who often have a harder time pushing thier work out there. </p>
+
+            </div>
+            <div class="information">
+                <H2>Original Character Battle Royal</H2>
+                <H3> NEXT TOURNAMENT: TBA</H3>
+                <p> Welcome to the OCBR the a bracket tournment for up to 16 individual characters created by various artists and creatives from the internet. Please wait while the tournament is being set up.</p>
+            </div>
+            <div class="Foot">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-youtube"></a>
+            </div>
+          </div>
+
+    </main>
+    <script>
+        var index = 0;
+        sSlides();
+
+        function sSlides(){
+            var i;
+            var slides = document.getElementsByClassName("slides");
+            for (i = 0; i<slides.length; i++){
+                slides[i].style.display ="none";
+            }
+            index++;
+            if (index > slides.length) {
+                index=1
+            }
+            slides[index-1].style.display = "block";
+            setTimeout(sSlides, 2000);
+        }
+    </script>
+  </body>
+</html>

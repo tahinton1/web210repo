@@ -1,0 +1,247 @@
+/*general*/
+
+body{
+    margin: 0;
+}
+
+.fa {
+    padding: 1vw;
+    width: 2vw;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .fa-facebook{
+    background: #3B5998;
+    color: white;
+  }
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+/* header*/
+.HEAD1 { 
+    background-image: url(../imageSilo/Travis-FantasyTavern\(1\).png) ;
+    background-size: cover;
+    background-position: center;
+}
+.HEAD1 h1{
+    color: beige;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4vw;
+    margin: 0%;
+    text-shadow: 2px 2px black;
+}
+.HEAD1 h3{
+    color: beige;
+    text-align: center;
+    font-size: 2vw;
+    margin: 0%;
+    text-shadow:2px 2px black;
+}
+
+
+/*navigation*/
+.Navigation {
+    background-color: black;
+}
+.navbar{
+    width: 100%;
+    overflow: auto;
+    margin-bottom: 0px;
+}
+.navbar a{ 
+    float:left;
+    box-sizing: border-box;
+    padding:0px;
+    /*border-style: solid;*/
+    text-decoration: none;
+    width: 25%;
+    text-align: center;
+    color: beige;
+    font-family: fantasy;
+}
+
+
+
+/*Image Carousel*/
+.Carou {
+    background-color:black;
+}
+.slides{
+    display: none;
+}
+
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+img {
+    object-fit: cover
+}
+
+
+@keyframes fade{
+    from{
+        opacity: .8;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+/*About*/
+.About {
+    background-image: url(../imageSilo/heros.png);
+    background-size: cover;
+    color: beige;
+    padding: 10px;
+}
+
+/*Information*/
+.information {
+    background-image: url(../imageSilo/BBracket.png);
+    background-size: cover;
+    background-position: center;
+    color: beige;
+    padding: 10px;
+}
+.information h2{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Footer*/
+.Foot {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    gap: 2vw;
+    grid-auto-flow: column;
+    background-image: url(../imageSilo/Travis-\ Fantasy\ Forest2\ \(1\).png) ;
+    background-size: cover;
+    background-position: center;
+    
+}
+@media screen and (max-width:480px){
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto auto auto;
+        gap: 0px 0px;
+        grid-template-areas:
+          "HEAD1 HEAD1 HEAD1 HEAD1"
+          "Navigation Navigation Navigation Navigation"
+          "Carou Carou Carou Carou"
+          "About About About About"
+          "information information information information"
+          "Foot Foot Foot Foot";
+        margin: 0;
+    }
+    .HEAD1 {
+        grid-area: HEAD1; 
+    }
+    .Navigation { 
+        grid-area: Navigation; 
+    }
+    .navbar a {
+        font-size: 16px;
+    }
+    .Carou { 
+        grid-area: Carou; 
+    }
+    .About { 
+        grid-area: About; 
+    }
+    .information { 
+        grid-area: information; 
+    }
+    .Foot { 
+        grid-area: Foot; 
+    }
+}
+@media screen and (min-width:481px){
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr Auto auto auto 1.1fr auto;
+        gap: 0px 0px;
+        grid-template-areas:
+          "HEAD1 HEAD1 HEAD1 HEAD1"
+          "Navigation Navigation Navigation Navigation"
+          "Carou Carou Carou Carou"
+          "Carou Carou Carou Carou"
+          "About About Information Information"
+          "Foot Foot Foot Foot";
+    }
+      
+    .HEAD1 { 
+        grid-area: HEAD1; 
+    }
+      
+    .Navigation {
+        grid-area: Navigation; 
+    }
+      
+    .Carou {
+        grid-area: Carou; 
+    }
+      
+    .About {
+        grid-area: About; 
+    }
+      
+    .information {
+        grid-area: Information; 
+    }
+      
+    .Foot {
+        grid-area: Foot; 
+    }  
+}
+@media screen and (min-width:1280px){
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr auto auto auto auto;
+        gap: 0px 0px;
+        grid-template-areas:
+          "HEAD1 HEAD1 HEAD1 HEAD1"
+          "Navigation Navigation Navigation Navigation"
+          "Carou Carou About About"
+          "Carou Carou information information"
+          "Foot Foot Foot Foot";
+      }
+
+    .HEAD1 {
+        grid-area: HEAD1; 
+    }
+
+    .Navigation { 
+        grid-area: Navigation; 
+    }
+
+    .Carou { 
+        grid-area: Carou; 
+    }
+
+    .About { 
+        grid-area: About; 
+    }
+
+    .information { 
+        grid-area: information; 
+    }
+
+    .Foot {
+         grid-area: Foot; 
+    }
+}

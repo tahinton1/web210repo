@@ -13,6 +13,25 @@
   <body>
     <main>
       <!-- ***********************  ABOUT / PROFILE  *********************** -->
+      <div class="navigation">
+          <ul>
+            <li><a href="#home">Profile</a></li>
+            <li><a href="#project">Projects</a>
+              <ul>
+                <li><a href="#lunar">Lunar</a></li>
+                <li><a href="#tavern">Tavern</a></li>
+              </ul>
+            </li>
+            <li><a href="#work">Work Experience</a></li>
+            <li><a href="#educ">Education</a>
+              <ul>
+                <li><a href="#highschool">Highschool</a></li>
+                <li><a href="#northeast">Northeast</a></li>
+              </ul>
+            </li>
+            <li><a href="#contact">Contact Information</a></li>
+          </ul>   
+      </div>
       <header>
         <div class="container">
           <h1>Travis Hinton</h1>
@@ -24,20 +43,20 @@
       </header>
 
       <!-- ********************  PROJECTS / PORTFOLIO  ********************* -->
-      <section class="projects">
-        <div class="container">
+      <section class="projects" id="project">
+        <div class="container devbox">
           <h2>Visual Light Novel</h2>
           <p>View selected projects below.</p>
 
           <!-- Copy the whole <section> block to add more projects. -->
-          <section class="dev-box">
+          <section class="dev-box" id="lunar">
             <img src="imageSilo/web210screen.png" alt="Battle scene of project">
             <h3>Lunar:Last Dream</h3>
             <p>This is the Visual Light Novel Project that we and a couple of buddies will be launching later this year.<br>
             As it stands I am currently the Project Director, Head Writer, and Art Director for this project.</p>
           </section>
-          <section class="dev-box">
-            <img src="imageSilo/Travis- Fantasy Tavern (1).png" alt="Battle scene of project">
+          <section class="dev-box" id="tavern">
+            <img src="imageSilo/Travis-FantasyTavern(1).png" alt="Battle scene of project">
             <h3>Slingstone: Tavern sim</h3>
             <p>Secondary project we started a couple years ago, I'm including it here to make sure everything works on this page like I think it should.</p>
           </section>
@@ -47,39 +66,43 @@
 
       <!-- ***********************  WORK EXPERIENCE  *********************** -->
       <section class="wEXP">
-        <div class="container">
-          <h2>Work Experience</h2>
+        <div class="container Idet devbox">
+          <h2 id="work">Work Experience</h2>
 
           <!-- Copy this whole <section> block to add more jobs. -->
-          <section>
-            <h3>Supervisor</h3>
-            <p>Teleperformance</p>
-            <p>Just a call center supervisor</p>
-            <p>List of responisibilities</p>
-            <ul>
-              <li>Create and detail project training for incoming projects/firms</li>
-              <li>Manage a 12-40 person team</li>
-              <li>Design and manage programs for managerial supervision</li>
-              <li>Follow dreams</li>
-            </ul>
+          <section class="Job-item">
+              <div class="j-details">
+                <h3>Supervisor</h3>
+                <p>Teleperformance</p>
+                <p>Just a call center supervisor</p>
+              </div>
+              <div class="j-summary">
+                <p>List of responisibilities</p>
+                <ul>
+                  <li>Create and detail project training for incoming projects/firms</li>
+                  <li>Manage a 12-40 person team</li>
+                  <li>Design and manage programs for managerial supervision</li>
+                  <li>Follow dreams</li>
+                </ul>
+              </div>
           </section>
           <!-- End of Job block. -->
         </div>
       </section>
 
       <!-- ******************  EDUCATION & CERTIFICATIONS ****************** -->
-      <section class="edu">
-        <div class="container">
+      <section class="edu" id="educ">
+        <div class="container Idet">
           <h2>Education</h2>
 
             <!-- Copy this whole <section> block to add more schools. -->
-            <section>
+            <section id="highschool">
               <h3>Beechcroft - Highschool</h3>
               <p>Graduated</p>
               <p>Graduated with honors</p>
             </section>
 
-          <section>
+          <section id="northeast">
             <h3>Northeast - Techical institute</h3>
             <p>Graduated 2006</p>
             <p>Graduated with honors with Java and A+ certifications</p>
@@ -89,12 +112,14 @@
       </section>
 
       <!-- *****************  CONTACT INFO / SOCIAL MEDIA  ***************** -->
-      <footer>
+      <footer id="contact">
         <div class="container">
           <h2>Let's Keep in Touch!</h2>
           
           <!-- Social media and contact links. Add or remove any networks. -->
-          <ul>
+          <ul class="contact-list">
+            <li><a href="mailto:tahinton1@my.waketech.edu">tahinton1@my.waketech.edu</a></li>
+            <li><a href="mailto:tahinton1@my.waketech.edu">tahinton1@my.waketech.edu</a></li>
             <li><a href="mailto:tahinton1@my.waketech.edu">tahinton1@my.waketech.edu</a></li>
           </ul>
           </div>

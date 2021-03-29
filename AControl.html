@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Bootstrap</title>
+</head>
+
+<body>
+<style>
+  .stoaktitle{
+    text-shadow: 2px 2px black;
+  }
+#adoptcarousel img {
+width: auto;
+height: 225px;
+max-height: 225px;
+
+}
+  .bg-pic{
+    background-image: url("stoakebg.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+  }
+  .dropdown-toggle:after {
+      content: none 
+  }
+  
+  .hamabs{
+    position: absolute;
+    top: 5px;
+    left: 85%;
+  }
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  .openbtn:hover {
+    background-color: #444;
+  }
+  .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+.bg-beige{
+  background-color: beige;
+}
+.events{
+  background-color: tan;
+  color:white;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 1vw;
+  display: block;
+}
+.imgwidthcontainer{
+  width: 100%;
+  height: auto;
+
+}
+video{
+  width: 100%;
+  height: auto;
+}
+.fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .fa {
+    padding: 1vw;
+    font-size: 30px;
+    text-decoration: none;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+  .footer {
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+.closebtn{
+    font-size:16px;
+    padding-top: 2Svw;
+    color: white;
+}
+.bTS{
+    transition: 0.3s;;
+}
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding:0;
+}
+</style>
+<div id="mySidenav" class="sidenav">
+    <button type="button" class="close closebtn" onclick="closeNav()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <a class="" href="stokehome.html">HOME</a>
+
+    <button class="dropdown-btn active">Administration
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container bTS">
+    <a href="BOC.html">Board of Commissioners</a>
+    <a href="#">Clerk of Court</a>
+    <a href="#">Elections</a>
+    <a href="#">Finance</a>
+    <a href="FireM.html">Fire Marshall</a>
+    <a href="#">Sheriff</a>
+    <a href="#">Soil Conservation</a>
+    <a href="#">Tax Administration</a>
+  </div>
+  <button class="dropdown-btn">911 CCOMMUNICATIONS
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="911Comm.html">911 Communications</a>
+    <a href="AControl.html">Animal Control</a>
+    <a href="#">Emergency Management</a>
+    <a href="#">EMS</a>
+  </div>
+  <button class="dropdown-btn">SERVICES
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Day Reporting Center</a>
+    <a href="#">Economic Development</a>
+    <a href="#">Health Department</a>
+    <a href="#">Public Works</a>
+    <a href="#">Planning/Inspections</a>
+    <a href="#">Library</a>
+    <a href="#">Mapping/GIS</a>
+    <a href="#">Senior Services</a>
+    <a href="#">Social Services</a>
+    <a href="#">Veteran Services</a>
+  </div>
+  <button class="dropdown-btn">LEGAL
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="Jail.html">Jail</a>
+    <a href="#">Register of Deeds</a>
+    <a href="#">Health Department</a>
+    <a href="#">Public Works</a>
+  </div>
+  <button class="dropdown-btn">ORGANIZATION
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Art Council</a>
+    <a href="#">Cooperative Extension</a>
+  </div>
+  <button class="dropdown-btn">CONTACT US
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Directions & Office Hours</a>
+    <a href="#">Toll Free Numbers</a>
+    <a href="#">Holidays & Closings</a>
+    <a href="#">Department Directory</a>
+    <a href="#">Report to the People</a>
+  </div>
+</div>
+<div class="container bg-light">
+  <div class="row bg-pic">
+    <div class="col header">
+      <div class="hamabs d-md-none" >
+        <button class="openbtn " onclick="openNav()">☰</button>  
+      </div>
+      <header class="newheader">
+        <H2 class="text-center text-white text-nowrap stoaktitle">STOAKES COUNTY</H2>
+        <h3 class="text-center text-white text-fluid stoaktitle">ANIMAL CONTROL</h3>
+        <p id="POBox" class="text-center text-white d-none d-md-block">
+        </p>
+      </header><!--Header-->
+      </div>    
+  </div> <!--HeaderEnd-->  
+  <nav id="navbarSite" class="navbar navbar-dark bg-dark navbar-expand-md d-none d-md-block sticky-top">
+    <div class="container">
+      <div class="navbar-nav justify-content-between w-100">
+        <a class="nav-item nav-link" href="stokehome.html">HOME</a>
+        <div class="dropdown">
+            <a class="nav-Item nav-link dropdown-toggle active" data-toggle="dropdown" id="adminDropdown"
+            aria-haspopup="true" aria-expanded="false" href="#">ADMINISTRATION</a>
+            <div class="dropdown-menu" aria-labelledby="adminDropdown">
+              <a class="dropdown-item" href="BOC.html">Board of Commissioners</a>
+              <a class="dropdown-item" href="#">Clerk of Court</a>
+              <a class="dropdown-item" href="#">Elections</a>
+              <a class="dropdown-item" href="#">Finance</a>
+              <a class="dropdown-item" href="FireM.html">Fire Marshall</a>
+              <a class="dropdown-item" href="#">Sheriff</a>
+              <a class="dropdown-item" href="#">Soil Conservation</a>
+              <a class="dropdown-item" href="#">Tax Administration</a>
+            </div>
+        </div>
+        <div class="dropdown">
+          <a class="nav-Item nav-link dropdown-toggle" data-toggle="dropdown" id="911Dropdown"
+          aria-haspopup="true" aria-expanded="false" href="#">911</a>
+            <div class="dropdown-menu" aria-labelledby="911Dropdown">
+              <a class= "dropdown-item" href="911Comm.html">911 Communications</a>
+              <a class= "dropdown-item" href="AControl.html">Animal Control</a>
+              <a class= "dropdown-item" href="#">Emergency Management</a>
+              <a class= "dropdown-item" href="#">EMS</a>
+            </div>        
+        </div>
+        <div class="dropdown">
+          <a class="nav-Item nav-link dropdown-toggle" data-toggle="dropdown" id="ServicesDropdown"
+          aria-haspopup="true" aria-expanded="false" href="#">SERVICES</a>
+            <div class="dropdown-menu" aria-labelledby="ServicesDropdown">
+              <a class="dropdown-item" href="#">Day Reporting Center</a>
+              <a class="dropdown-item" href="#">Economic Development</a>
+              <a class="dropdown-item" href="#">Health Department</a>
+              <a class="dropdown-item" href="#">Public Works</a>
+              <a class="dropdown-item" href="#">Planning/Inspections</a>
+              <a class="dropdown-item" href="#">Library</a>
+              <a class="dropdown-item" href="#">Mapping/GIS</a>
+              <a class="dropdown-item" href="#">Senior Services</a>
+              <a class="dropdown-item" href="#">Social Services</a>
+              <a class="dropdown-item" href="#">Veteran Services</a>
+            </div>        
+        </div>
+        <div class="dropdown">
+          <a class="nav-Item nav-link dropdown-toggle" data-toggle="dropdown" id="LegalDropdown"
+          aria-haspopup="true" aria-expanded="false" href="#">LEGAL</a>
+            <div class="dropdown-menu" aria-labelledby="LegalDropdown">
+              <a class="dropdown-item" href="Jail.html">Jail</a>
+              <a class="dropdown-item" href="#">Register of Deeds</a>
+              <a class="dropdown-item" href="#">Health Department</a>
+              <a class="dropdown-item" href="#">Public Works</a>
+            </div>        
+        </div>
+        <div class="dropdown">
+          <a class="nav-Item nav-link dropdown-toggle" data-toggle="dropdown" id="OrgDropdown"
+          aria-haspopup="true" aria-expanded="false" href="#">ORGANIZATION</a>
+            <div class="dropdown-menu" aria-labelledby="OrgDropdown">
+              <a  class="dropdown-item" href="#">Art Council</a>
+              <a  class="dropdown-item" href="#">Cooperative Extension</a>
+            </div>        
+        </div>
+        <div class="dropdown">
+          <a class="nav-Item nav-link dropdown-toggle" data-toggle="dropdown" id="ContactDropdown"
+          aria-haspopup="true" aria-expanded="false" href="#">CONTACT US</a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="ContactDropdown">
+              <a  class="dropdown-item" href="#">Directions & Office Hours</a>
+              <a  class="dropdown-item" href="#">Toll Free Numbers</a>
+              <a  class="dropdown-item" href="#">Holidays & Closings</a>
+              <a  class="dropdown-item" href="#">Department Directory</a>
+              <a  class="dropdown-item" href="#">Report to the People</a>
+            </div>        
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="row"><!-- Content Welcome Main Stuff-->
+    <div class="col-md-9 col-sm">
+        <h3 class="text-center text-danger">ADOPT ME!</h3>
+        <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a data-toggle="modal" href="#Adopt1modal"><img class="d-block w-100" src="dog1Car.png" alt="First slide"></a>
+            </div>
+            <div class="carousel-item ">
+                <a data-toggle="modal" href="#Adopt2modal"><img class="d-block w-100" src="dog2Car.png" alt="First slide"></a>
+            </div>
+            <div class="carousel-item ">
+                <a data-toggle="modal" href="#Adopt3modal"><img class="d-block w-100" src="dog3Car.png" alt="First slide"></a>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row">
+          <ul class="navbar navbar-dark bg-white nav-pill navbar-expand justify-content-between w-100">
+            <li class="nav-item" data-target="#carouselIndicators" data-slide-to="0">Bruno</li>
+            <li class="nav-item" data-target="#carouselIndicators" data-slide-to="1">Dasher</li>
+            <li class="nav-item" data-target="#carouselIndicators" data-slide-to="2">Spot</li>
+          </ul>
+        </div>
+        <div class="row">
+            <div class="col">
+                <H3 class="text-center"><a class="text-danger" href="http://www.co.stokes.nc.us/animal/Adoption.doc"><u>Pet Adoption Application</u></a></H3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <H4>News</H4>
+                <P>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea vero ipsa, corrupti facilis iste voluptas odio illum enim quasi perferendis? Velit totam aut, repudiandae est error cumque quia earum vero?
+                </P>
+            </div>
+        </div>
+        <div class="modal fade" id="Adopt1modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Bruno</h4>
+                    </div><!--Modal header-->
+                    <div class="modal-body">
+                        <img  class="img-responsive"src="dog1.jpg" alt="Dog" style="max-height: 480px; max-width: 100%;">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates distinctio, fugit repellat possimus autem tempore commodi beatae vitae eum est totam necessitatibus eos provident iste nemo optio assumenda debitis quis?
+                        </p>
+                    </div>
+                    <div class="modal-footer d-block d-md-none">
+                      <button type="button" class="btn float-right btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="Adopt2modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Dasher</h4>
+                    </div><!--Modal header-->
+                    <div class="modal-body">
+                        <img class="img-responsive" src="dog2.jpg" alt="Dog" style="max-height: 480px; max-width: 100%;">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates distinctio, fugit repellat possimus autem tempore commodi beatae vitae eum est totam necessitatibus eos provident iste nemo optio assumenda debitis quis?
+                        </p>
+                    </div>
+                    <div class="modal-footer d-block d-md-none">
+                      <button type="button" class="btn float-right btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="Adopt3modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Spot</h4>
+                    </div><!--Modal header-->
+                    <div class="modal-body">
+                        <img class="img-responsive" src="dog3.jpeg" alt="Dog" style="max-height: 480px; max-width: 100%;">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates distinctio, fugit repellat possimus autem tempore commodi beatae vitae eum est totam necessitatibus eos provident iste nemo optio assumenda debitis quis?
+                        </p>
+                    </div>
+                    <div class="modal-footer d-block d-md-none">
+                      <button type="button" class="btn float-right btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 d-none d-md-block">
+        <ul>
+            <li style="list-style-image: url('image515.png') ;"><a data-toggle="modal" href="#ARModal">Adoption Rates</a></li>
+            <li style="list-style-image: url('image515.png') ;"><a data-toggle="modal" href="#APModal">Adoption Pledge</a></li>
+            <li style="list-style-image: url('image515.png') ;"><a href="http://www.co.stokes.nc.us/animal/Exotic_Animal_Ordinance.pdf">Exotic Animal Ordinance</a></li>
+            <li style="list-style-image: url('image515.png') ;"><a href="http://www.co.stokes.nc.us/animal/CountyAnimalOrdinance.pdf">County animal Ordinance</a></li>
+            <li style="list-style-image: url('image515.png') ;"><a data-toggle="modal" href="#PCTModal">Pet Care Tips</a></li>
+        </ul>
+    </div>
+    <div class="modal fade" id="ARModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-info">
+                    <h4 class="modal-title text-white">Adoption Fees and Procedures</h4>
+                </div><!--Modal header-->
+                <div class="modal-body">
+                    <h5 class="text-danger">ADOPTION FEES FOR RESIDENTS OF STOKES COUNTY</h5>
+                    <h6>Dogs (Canine): $100.00</h6>
+                    <p>Includes: Adoption Fee, Spay/Neuter, Heartworm Test, First DHPP Vaccine, Parasite Treatment, Rabies Vaccination (or voucher if not of age) & County Tag)</p>
+                    <h6>Cats (Feline): $60.00 or $100.00</h6>
+                    <p>$60.00 Includes: Adoption Fee, Spay/Neuter, Rabies Vaccination (or voucher if not of age)</p>                
+                    <p class="text-muted">$100.00 Includes: Adoption Fee, Spay/Neuter, Rabies Vaccination (or voucher if not of age), Parasite Treatment, FIV & Feline Leukemia Vaccines, & First FVRCP Vaccinations.</p>
+                    <h5 class="text-danger">ADOPTION FEES FOR NON-RESIDENTS OF STOKES COUNTY</h5>
+                    <h6>Dogs(Canine): $94.00</h6>
+                    <p>Includes: Adoption Fee, Spay/Neuter, Heartworm Test, First DHPP Vaccine, Parasite Treatment, Rabies Vaccination (or voucher if not of age) & County Tag)<p>
+                    <h6>Cats (Feline): $60.00 or $100.00</h6>
+                    <p>$60.00 Includes: Adoption Fee, Spay/Neuter, Rabies Vaccination (or voucher if not of age)</p>
+                    <p class="text-muted">$100.00 Includes: Adoption Fee, Spay/Neuter, Rabies Vaccination (or voucher if not of age), Parasite Treatment, FIV & Feline Leukemia Vaccines, & First FVRCP Vaccinations.</p>
+                    <p>
+                    The adoption of a new pet should be a carefully thought out process.<br>  
+                    Adoption from an Animal Shelter is an option that few people take.  There is in fact only a 10-15% adoption rate at most shelters.  If you decide you are ready to adopt please don't forget your county animal shelter.  We would love to see our animals get good homes.<br>
+                    We ask that you read over the following "Pet Owners Pledge" and ponder the responsibilities of pet ownership.<br>
+                    After deciding that you are ready for this new challenge, you must decide what pet is right for your lifestyle.  The area in which you live is always a factor.  Is your residence large enough to house the animal you choose?  Do you need an indoor or outdoor pet?  Should it be small or large?  Should it be short haired or long haired?  What items will you need to care for this pet?<br>
+                    The adoption procedure at the Stokes County Animal Shelter is as follows:<br>
+                    Stray animals are held stray animals are held for 3 working days (72 hours) to enable the owner an opportunity to claim their pet.  At the end of the holding period, adoptable animals are placed up for adoption. We do not have a medical staff at our facility and therefore, we are not able to guarantee the health of animals adopted from our shelter.  We highly recommend having your new pet examined and deemed healthy by a veterinarian.  We also recommend having your new pet spayed or neutered to eliminate the over population of unwanted stray animals.<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="APModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-info">
+                    <h4 class="modal-title text-white">Pet Owners Pledge</h4>
+                </div><!--Modal header-->
+                <div class="modal-body">
+                    <p class="text-center">
+                        I am acquiring a pet to love and enjoy. <br>
+                        It is a priviledge to own a pet, <br>
+                        I have a responsibility to care for my pet during its life. <br>
+                        I am not impulsively obtaining a pet. <br>
+                        I have consulted other members of my household <br>
+                        I have considered how it will change my lifestyle <br>
+                        I know my responsibility in regard to,
+                            <ul class="text-center">
+                                <li>Food</li>
+                                <li>Water</li>
+                                <li>Housing</li>
+                                <li>Medical Care</li>
+                                <li>Training</li>
+                                <li>Etc...</li>
+                            </ul>
+                    </p>
+                    <p class="text-center">
+                        I am aware of society animal surplus problem and my part in it<br>
+                        I will control my pet's ability to produce offspring by having it spayed and neutered<br>
+                        I will follow state and local laws pertaining to my pet and prevent it from infringing on the rights of others<br>
+                        I will not abandon my pet<br>
+                    </p><br>
+                    <p class="text-center">
+                        If I cannot properly care for my pet, I will try to find it a good home. If there is no other choice, I will take it to and animal shelter for possible community placement, or I will take responsibility myself and have it humanely euthanized by an veterinarian.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="PCTModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-info">
+                    <h4 class="modal-title text-white">Caring for Your New Pet</h4>
+                </div><!--Modal header-->
+                <div class="modal-body">
+                        <p>
+                        Now that you have made your choice on which animal you wish to adopt, please make sure that you really want this animal, and that you are willing to care or it properly, including vaccinations and veterinary care.
+                        Below is a checklist of things to do to keep your new adopted pet healthy and happy:
+                        </p>
+                        <h5>EQUIPMENT NEEDS:</h5>
+                        <h6>Food and water bowls</h6>
+                            <ul>
+                                <li>Bowls should be unbreakable and shaped so that they cannot tip over. </li>
+                                <li>Stainless steel, aluminum or ceramic are good choices. </li>
+                                <li>Plastics can be chewed up and swallowed.</li>
+                            </ul>
+                        <h6>Collar</h6>
+                            <ul>
+                                <li>Should be of webbed nylon or soft leather. </li>
+                                <li>It should fit loosely enough to move freely around your pet’s neck, yet snug enough not to slip over its head.</li>
+                                <li>You should be able to get two finders under it.</li> 
+                                <li>Be sure to adjust as your pet grows.</li>
+                            </ul>
+                        <h6>Leash</h6>
+                            <ul>
+                                <li>Leashes should be made of webbed nylon or sturdy leather with secure clasp. </li>
+                                <li>Six feet is the best length for training and walking your pet.</li>
+                            </ul>
+                        <h6>Bed</h6>
+                            <ul>
+                                <li>warm, dry and comfortable.</li>
+                            </ul>
+                        <h6>Toys</h6>
+                            <ul>
+                                <li> rawhide chips, hard nylon chews and rubber balls are good choices for dogs.</li>
+                                <li>Ping-pong balls and cardboard paper tubes are popular choices for cats.</li>
+                                <li>Make sure that toys are safe.</li>
+                                <li>Avoid toys with attached parts that can be torn off and swallowed.</li>
+                            </ul>
+                        <br>
+                        <br>
+                        <p>
+                        Take your pet to a veterinarian and talk with them about your pet’s care.<br>
+                        Law requires a rabies vaccination but other vaccinations & worming are needed to keep your pet healthy.<br>
+                        Our staff strongly suggests that when your pet is old enough it be SPAYED or NEUTERED. <br>
+                        This keeps down the number of unwanted pets.<br>
+                        See that your dog is wearing both its rabies and county tax tags.  This is the law and also serves as identification in the event your dog becomes lost. <br>
+                        Cats are not required to wear the rabies tag.  However, you are required to provide proof of vaccination, if needed.<br><br>
+                        See that your pet is a good neighbor by not allowing him to:
+                            <ul>
+                                <li>roam the neighborhood</li>
+                                <li>bark excessively or soil your neighbors shrubbery or lawn, or tear up flowers and landscaping</li>
+                                <li>chase cars, bicycles or people</li>
+                                <li>frighten or bite postman, meter reader or other service people</li>
+                                <li>lunge at or jump on passers-by.</li>
+                            </ul>
+                         <br>   
+                        Have fun with your new pet and remember that it needs training and discipline along with plenty of tender love and care.
+                        </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div><!-- content container -->
+<script>
+  function openNav() {
+  document.getElementById("mySidenav").style.width = "300px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+s
+</script>
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
